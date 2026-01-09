@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="container flex justify-between items-center">
         {/* Logo Area */}
         <Link to="/" style={{ fontSize: '1.25rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <img src="/src/assets/logo.png" alt="Logo" style={{ height: '32px' }} />
+          <img src="/logo.png" alt="Logo" style={{ height: '32px' }} />
 
         </Link>
 
