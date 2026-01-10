@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { useParams, Navigate, Link } from 'react-router-dom';
+import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
 import { modules } from '../data';
 import { ChevronRight, ChevronLeft, FileText, ChevronDown, ChevronUp } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 const SubModuleDetail = () => {
   const { moduleId, subId } = useParams<{ moduleId: string; subId: string }>();
+  const navigate = useNavigate();
   
   const module = modules.find(m => m.id === moduleId);
   const subModule = module?.subModules.find(s => s.id === subId);
@@ -20,6 +21,21 @@ const SubModuleDetail = () => {
   if (!module || !subModule) {
     return <Navigate to="/contents" replace />;
   }
+
+  // Handle clicks on links within dangerouslySetInnerHTML content
+  const handleContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'A') {
+      const anchor = target as HTMLAnchorElement;
+      const href = anchor.getAttribute('href');
+      
+      // Check if it's an internal link (starts with /)
+      if (href && href.startsWith('/')) {
+        e.preventDefault();
+        navigate(href);
+      }
+    }
+  };
 
   return (
     <div className="container fade-in" style={{ padding: 'var(--spacing-2xl) var(--spacing-lg)' }}>
@@ -87,7 +103,7 @@ const SubModuleDetail = () => {
         </aside>
 
         {/* content Area */}
-        <div className="content">
+        <div className="content" onClick={handleContentClick}>
           {subModule.sections.length > 0 ? (
             subModule.sections.map((section, idx) => {
               // 1. SECTION HEADER (New "On the day" style)
