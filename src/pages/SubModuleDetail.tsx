@@ -46,7 +46,8 @@ const SubModuleDetail = () => {
         gap: '8px', 
         color: 'var(--color-text-light)', 
         marginBottom: 'var(--spacing-lg)',
-        fontSize: '0.9rem'
+        fontSize: '0.9rem',
+        flexWrap: 'wrap'
       }}>
         <Link to="/contents" className="hover-underline">Contents</Link>
         <ChevronRight size={14} />
@@ -60,9 +61,9 @@ const SubModuleDetail = () => {
         <div style={{ width: '60px', height: '4px', backgroundColor: module.color }} />
       </header>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) 3fr', gap: 'var(--spacing-2xl)' }}>
+      <div className="submodule-layout" style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) 3fr', gap: 'var(--spacing-2xl)' }}>
         {/* Navigation Sidebar */}
-        <aside style={{ height: 'fit-content' }}>
+        <aside className="submodule-sidebar" style={{ height: 'fit-content' }}>
           <div style={{ 
             backgroundColor: 'var(--color-bg-soft)', 
             padding: 'var(--spacing-lg)', 
@@ -229,6 +230,19 @@ const SubModuleDetail = () => {
           )}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .submodule-layout {
+            grid-template-columns: 1fr !important;
+          }
+
+          .submodule-sidebar {
+            order: -1;
+            margin-bottom: var(--spacing-lg);
+          }
+        }
+      `}</style>
     </div>
   );
 };

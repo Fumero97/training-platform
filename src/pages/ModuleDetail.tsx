@@ -30,7 +30,7 @@ const ModuleDetail = () => {
       </Link>
 
       {/* Header */}
-      <header style={{ 
+      <header className="module-header" style={{ 
         display: 'flex', 
         alignItems: 'start', 
         gap: 'var(--spacing-lg)', 
@@ -62,7 +62,7 @@ const ModuleDetail = () => {
         {/* Sub-Modules Grid */}
         <div>
           <h2 style={{ marginBottom: 'var(--spacing-lg)', fontSize: '1.75rem' }}>Topics in this module</h2>
-          <div style={{ 
+          <div className="module-topics-grid" style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
             gap: 'var(--spacing-lg)' 
@@ -119,6 +119,34 @@ const ModuleDetail = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .module-header {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center;
+          }
+
+          .module-header h1 {
+            font-size: 2rem !important;
+          }
+
+          .module-header p {
+            font-size: 1rem !important;
+          }
+
+          .module-topics-grid {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .module-topics-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };

@@ -52,7 +52,7 @@ const Contents = () => {
         </p>
       </div>
 
-      <div style={{ 
+      <div className="contents-grid" style={{ 
         display: 'grid', 
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
         gap: 'var(--spacing-lg)' 
@@ -68,6 +68,20 @@ const Contents = () => {
           />
         ))}
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .contents-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .contents-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };

@@ -77,17 +77,17 @@ const WhosWho = () => {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-2xl)' }}>
         
         {/* Level 1: Adam, Daniele */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-xl)', flexWrap: 'wrap' }}>
+        <div className="staff-row" style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-xl)', flexWrap: 'wrap' }}>
           {level1.map(person => <StaffCard key={person.name} person={person} />)}
         </div>
 
         {/* Level 2: Ariosto, Beatrice, Don */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-xl)', flexWrap: 'wrap' }}>
+        <div className="staff-row" style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-xl)', flexWrap: 'wrap' }}>
           {level2.map(person => <StaffCard key={person.name} person={person} />)}
         </div>
 
         {/* Level 3: Louis, George, Oriana */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-xl)', flexWrap: 'wrap' }}>
+        <div className="staff-row" style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-xl)', flexWrap: 'wrap' }}>
           {level3.map(person => <StaffCard key={person.name} person={person} />)}
         </div>
 
@@ -109,6 +109,20 @@ const WhosWho = () => {
           Let's Start
         </Button>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .staff-row {
+            flex-direction: column !important;
+            align-items: center !important;
+          }
+
+          .staff-row > div {
+            width: 100%;
+            max-width: 350px;
+          }
+        }
+      `}</style>
     </div>
   );
 };

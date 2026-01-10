@@ -134,3 +134,85 @@ button {
 .fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================ */
+
+/* Tablet Styles (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+  /* Container adjustments */
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Typography scaling */
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4, h5, h6 {
+    font-size: 1rem;
+  }
+
+  /* Content typography */
+  .content h3 {
+    font-size: 1.1rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  /* Responsive utilities */
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+}
+
+/* Small Mobile Styles (up to 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+}

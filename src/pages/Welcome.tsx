@@ -11,8 +11,8 @@ const Welcome = () => {
       </header>
 
       <div style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', lineHeight: '1.7', color: 'var(--color-text)' }}>
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'stretch', marginBottom: '1.5rem', flexDirection: 'row' }}>
-          <div style={{ width: '200px', flexShrink: 0 }}>
+        <div className="welcome-intro" style={{ display: 'flex', gap: '2rem', alignItems: 'stretch', marginBottom: '1.5rem', flexDirection: 'row' }}>
+          <div className="welcome-image" style={{ width: '200px', flexShrink: 0 }}>
              <img 
               src="https://languageinactionltd.co.uk/wp-content/uploads/sites/9/2025/08/Malvern-International-head-language-i-action-adam-ennis.jpg" 
               alt="Adam Ennis" 
@@ -79,6 +79,25 @@ const Welcome = () => {
           </Button>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .welcome-intro {
+            flex-direction: column !important;
+            align-items: center !important;
+          }
+
+          .welcome-image {
+            width: 100% !important;
+            max-width: 250px !important;
+            flex-shrink: 1 !important;
+          }
+
+          .welcome-intro p {
+            font-size: 1rem !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };

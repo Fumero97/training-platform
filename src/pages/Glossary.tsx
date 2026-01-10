@@ -67,7 +67,7 @@ const Glossary = () => {
                    </h2>
                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
                     {categoryTerms.map((item, index) => (
-                      <div key={index} style={{
+                      <div key={index} className="glossary-term" style={{
                         backgroundColor: 'var(--color-bg-soft)',
                         padding: 'var(--spacing-lg)',
                         borderRadius: 'var(--radius-md)',
@@ -81,7 +81,7 @@ const Glossary = () => {
                           fontWeight: '700', 
                           color: 'var(--color-primary)',
                           minWidth: '150px'
-                        }}>
+                        }} className="glossary-term-label">
                           {item.term}
                         </span>
                         <span style={{ color: 'var(--color-text)', lineHeight: 1.6, flex: 1 }}>
@@ -104,6 +104,20 @@ const Glossary = () => {
           </Button>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .glossary-term {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+          }
+
+          .glossary-term-label {
+            min-width: auto !important;
+            width: 100%;
+          }
+        }
+      `}</style>
     </div>
   );
 };

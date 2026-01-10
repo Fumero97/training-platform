@@ -1,7 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 
-
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -10,7 +8,8 @@ const Home = () => {
       display: 'flex', 
       minHeight: '100vh', 
       backgroundColor: 'var(--color-bg)',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      flexDirection: 'row'
     }}>
       
       {/* Left Content Section */}
@@ -19,7 +18,7 @@ const Home = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: '0 var(--spacing-2xl)', // Horizontal padding
+        padding: '0 var(--spacing-2xl)',
         zIndex: 1
       }}>
         <div style={{ maxWidth: '600px', marginLeft: 'auto', marginRight: 'var(--spacing-xl)' }}>
@@ -47,7 +46,7 @@ const Home = () => {
             color: 'var(--color-primary)',
             position: 'relative',
             display: 'inline-block'
-          }}>
+          }} className="home-title">
             Management<br />
             Guide<br />
             <span style={{ position: 'relative', display: 'inline-block' }}>
@@ -75,7 +74,7 @@ const Home = () => {
             fontWeight: '500',
             lineHeight: 1.6,
             maxWidth: '450px'
-          }}>
+          }} className="home-description">
             Your comprehensive guide to operations, logistics, welfare, and management standards for the summer.
           </p>
 
@@ -108,7 +107,7 @@ const Home = () => {
       </div>
 
       {/* Right Pattern Section */}
-      <div style={{
+      <div className="home-pattern-grid" style={{
         flex: 1,
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
@@ -116,16 +115,16 @@ const Home = () => {
         height: '100vh'
       }}>
         {/* TL: Peach */}
-        <div style={{ backgroundColor: '#FFD6AC' }} /> {/* Approx Peach */}
+        <div style={{ backgroundColor: '#FFD6AC' }} />
 
         {/* TR: Orange */}
-        <div style={{ backgroundColor: '#FF9F3F' }} /> {/* Approx Orange */}
+        <div style={{ backgroundColor: '#FF9F3F' }} />
 
         {/* BL: Photo with Green Overlay */}
         <div style={{ 
           position: 'relative', 
-          backgroundColor: '#3399ff', // Fallback
-          backgroundImage: 'url("https://languageinactionltd.co.uk/wp-content/uploads/sites/9/2025/08/language-in-action-activity-leaders-at-middlesex-1536x1024.jpg")', // New Students photo
+          backgroundColor: '#3399ff',
+          backgroundImage: 'url("https://languageinactionltd.co.uk/wp-content/uploads/sites/9/2025/08/language-in-action-activity-leaders-at-middlesex-1536x1024.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
@@ -136,21 +135,14 @@ const Home = () => {
              left: 0,
              width: '100%',
              height: '100%',
-             background: 'radial-gradient(circle at top left, #45D55D 40%, transparent 40.5%)', // Inverted: Green is just the corner, Image is main
+             background: 'radial-gradient(circle at top left, #45D55D 40%, transparent 40.5%)',
              pointerEvents: 'none' 
            }} />
         </div>
-           {/* Wait, looking at image: It seems the photo IS visible in the "cutout".
-               If I make a Green div with border-bottom-right-radius, the "radius" part is curved "in".
-               Wait, border-radius on a filled box makes the box rounded.
-               If I want the Top-Left to be Green and the Bottom-Right to be Photo:
-               I need the Green box to be in the Top-Left.
-               If I set width/height 100% and border-bottom-right-radius 100%, the green is the "shape" and the empty space (bottom right) is transparent, revealing the photo underneath.
-               Yes, that works.
-            */}
-            {/* BR: Blue with Purple shape */}
+
+        {/* BR: Blue with Purple shape */}
         <div style={{ 
-          backgroundColor: '#3399FF', // Blue
+          backgroundColor: '#3399FF',
           position: 'relative'
         }}>
           {/* Purple Shape - Bottom Right */}
@@ -158,14 +150,51 @@ const Home = () => {
             position: 'absolute',
             bottom: 0,
             right: 0,
-            width: '80%', // Not full width in image? Looks like a large corner.
+            width: '80%',
             height: '80%',
-            backgroundColor: '#9C5AFF', // Purple
+            backgroundColor: '#9C5AFF',
             borderTopLeftRadius: '100%'
           }} />
         </div>
-        </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .fade-in > div:first-child {
+            flex-direction: column !important;
+          }
+
+          .home-pattern-grid {
+            display: none !important;
+          }
+
+          .fade-in > div:first-child {
+            padding: var(--spacing-xl) var(--spacing-md) !important;
+            text-align: center;
+          }
+
+          .fade-in > div:first-child > div {
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+
+          .home-title {
+            font-size: 2.5rem !important;
+          }
+
+          .home-description {
+            font-size: 1rem !important;
+            max-width: 100% !important;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .home-title {
+            font-size: 2rem !important;
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
