@@ -7,23 +7,26 @@ import Glossary from './pages/Glossary';
 import Welcome from './pages/Welcome';
 import ModuleDetail from './pages/ModuleDetail';
 import SubModuleDetail from './pages/SubModuleDetail';
+import PasswordGate from './components/PasswordGate';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="welcome" element={<Welcome />} />
-          <Route path="contents" element={<Contents />} />
-          <Route path="contents/:moduleId" element={<ModuleDetail />} />
-          <Route path="contents/:moduleId/:subId" element={<SubModuleDetail />} />
-          <Route path="whos-who" element={<WhosWho />} />
-          <Route path="glossary" element={<Glossary />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <PasswordGate>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="welcome" element={<Welcome />} />
+            <Route path="contents" element={<Contents />} />
+            <Route path="contents/:moduleId" element={<ModuleDetail />} />
+            <Route path="contents/:moduleId/:subId" element={<SubModuleDetail />} />
+            <Route path="whos-who" element={<WhosWho />} />
+            <Route path="glossary" element={<Glossary />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </PasswordGate>
   );
 }
 
