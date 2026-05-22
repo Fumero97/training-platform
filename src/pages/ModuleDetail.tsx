@@ -1,11 +1,14 @@
 
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { modules } from '../data';
+import { modulesByGroup } from '../data';
+import { useUserGroup } from '../contexts/UserGroupContext';
 import { ChevronLeft, FileText } from 'lucide-react';
 
 const ModuleDetail = () => {
   const { moduleId } = useParams<{ moduleId: string }>();
+  const { group } = useUserGroup();
+  const modules = modulesByGroup[group ?? 'A'];
   const module = modules.find(m => m.id === moduleId);
 
   if (!module) {

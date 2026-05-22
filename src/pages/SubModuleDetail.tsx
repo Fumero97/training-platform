@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
-import { modules } from '../data';
+import { modulesByGroup } from '../data';
+import { useUserGroup } from '../contexts/UserGroupContext';
 import { ChevronRight, ChevronLeft, FileText, ChevronDown, ChevronUp } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 const SubModuleDetail = () => {
   const { moduleId, subId } = useParams<{ moduleId: string; subId: string }>();
   const navigate = useNavigate();
-  
+  const { group } = useUserGroup();
+  const modules = modulesByGroup[group ?? 'A'];
   const module = modules.find(m => m.id === moduleId);
   const subModule = module?.subModules.find(s => s.id === subId);
   

@@ -8,9 +8,11 @@ import Welcome from './pages/Welcome';
 import ModuleDetail from './pages/ModuleDetail';
 import SubModuleDetail from './pages/SubModuleDetail';
 import PasswordGate from './components/PasswordGate';
+import { UserGroupProvider } from './contexts/UserGroupContext';
 
 function App() {
   return (
+    <UserGroupProvider>
     <PasswordGate>
       <BrowserRouter>
         <Routes>
@@ -27,6 +29,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </PasswordGate>
+    </UserGroupProvider>
   );
 }
 

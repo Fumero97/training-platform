@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { glossaryTerms } from '../data';
+import { glossaryTermsByGroup } from '../data';
+import { useUserGroup } from '../contexts/UserGroupContext';
 import { Search } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 const Glossary = () => {
   const navigate = useNavigate();
+  const { group } = useUserGroup();
+  const glossaryTerms = glossaryTermsByGroup[group ?? 'A'];
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredTerms = glossaryTerms.filter(item => 
+  const filteredTerms = glossaryTerms.filter(item =>
     item.term.toLowerCase().includes(searchTerm.toLowerCase()) || 
     item.definition.toLowerCase().includes(searchTerm.toLowerCase())
   );

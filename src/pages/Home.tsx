@@ -1,7 +1,16 @@
 import { useNavigate } from 'react-router-dom';
+import { useUserGroup } from '../contexts/UserGroupContext';
+
+const titleByGroup = {
+  A: { line1: 'Management', line2: 'Guide', line3: '2026.' },
+  B: { line1: 'Campus Leader', line2: 'Training', line3: null },
+  C: { line1: 'Tour Guide', line2: 'Training', line3: null },
+};
 
 const Home = () => {
   const navigate = useNavigate();
+  const { group } = useUserGroup();
+  const title = titleByGroup[group ?? 'A'];
 
   return (
     <div className="fade-in" style={{ 
@@ -47,24 +56,25 @@ const Home = () => {
             position: 'relative',
             display: 'inline-block'
           }} className="home-title">
-            Management<br />
-            Guide<br />
-            <span style={{ position: 'relative', display: 'inline-block' }}>
-              2026.
-              {/* Hand-drawn Oval SVG Highlight */}
-              <svg style={{ 
-                position: 'absolute', 
-                top: '-15%', 
-                left: '-10%', 
-                width: '120%', 
-                height: '130%', 
-                zIndex: -1, 
-                transform: 'rotate(-2deg)',
-                overflow: 'visible' 
-              }} viewBox="0 0 300 100" preserveAspectRatio="none">
-                 <path d="M10,50 C30,10 270,10 290,50 C280,90 20,90 10,50 Z" fill="none" stroke="var(--color-accent-blue)" strokeWidth="8" opacity="0.6" />
-              </svg>
-            </span>
+            {title.line1}<br />
+            {title.line2}<br />
+            {title.line3 ? (
+              <span style={{ position: 'relative', display: 'inline-block' }}>
+                {title.line3}
+                <svg style={{
+                  position: 'absolute',
+                  top: '-15%',
+                  left: '-10%',
+                  width: '120%',
+                  height: '130%',
+                  zIndex: -1,
+                  transform: 'rotate(-2deg)',
+                  overflow: 'visible'
+                }} viewBox="0 0 300 100" preserveAspectRatio="none">
+                  <path d="M10,50 C30,10 270,10 290,50 C280,90 20,90 10,50 Z" fill="none" stroke="var(--color-accent-blue)" strokeWidth="8" opacity="0.6" />
+                </svg>
+              </span>
+            ) : null}
           </h1>
 
           <p style={{ 
