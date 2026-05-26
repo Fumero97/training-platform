@@ -24,6 +24,23 @@ const SubModuleDetail = () => {
     return <Navigate to="/contents" replace />;
   }
 
+  // Next navigation (groups B and C only)
+  const showNext = group === 'B' || group === 'C';
+  const currentSubIndex = module.subModules.findIndex(s => s.id === subId);
+  const currentModuleIndex = modules.findIndex(m => m.id === moduleId);
+  const nextSub = module.subModules[currentSubIndex + 1];
+  const nextModule = modules[currentModuleIndex + 1];
+  const nextPath = nextSub
+    ? `/contents/${moduleId}/${nextSub.id}`
+    : nextModule?.subModules[0]
+      ? `/contents/${nextModule.id}/${nextModule.subModules[0].id}`
+      : null;
+  const nextLabel = nextSub
+    ? nextSub.title
+    : nextModule
+      ? nextModule.title
+      : null;
+
   // Handle clicks on links within dangerouslySetInnerHTML content
   const handleContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
@@ -232,6 +249,34 @@ const SubModuleDetail = () => {
           )}
         </div>
       </div>
+
+      {/* Next button */}
+      {showNext && nextPath && nextLabel && (
+        <div style={{ marginTop: 'var(--spacing-2xl)', display: 'flex', justifyContent: 'flex-end' }}>
+          <Link
+            to={nextPath}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              backgroundColor: 'var(--color-primary)',
+              color: 'white',
+              padding: '0.75rem 1.5rem',
+              borderRadius: 'var(--radius-full)',
+              fontWeight: 600,
+              fontSize: '1rem',
+              textDecoration: 'none',
+              transition: 'opacity 0.2s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
+            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+            onClick={() => window.scrollTo({ top: 0 })}
+          >
+            {nextLabel}
+            <ChevronRight size={18} />
+          </Link>
+        </div>
+      )}
 
       <style>{`
         @media (max-width: 768px) {

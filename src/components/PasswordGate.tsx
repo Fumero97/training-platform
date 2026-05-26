@@ -3,8 +3,8 @@ import { useUserGroup, type UserGroup } from "../contexts/UserGroupContext";
 
 const PASSWORD_MAP: Record<string, UserGroup> = {
   "training2026": "A",
-  "pass-gruppoB": "B",
-  "pass-gruppoC": "C",
+  "training2026_Campus": "B",
+  "training2026.Tour": "C",
 };
 const STORAGE_KEY = "siteUnlocked";
 

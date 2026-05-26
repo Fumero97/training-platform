@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { glossaryTermsByGroup } from '../data';
 import { useUserGroup } from '../contexts/UserGroupContext';
-import { Search } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 const Glossary = () => {
@@ -10,6 +10,17 @@ const Glossary = () => {
   const { group } = useUserGroup();
   const glossaryTerms = glossaryTermsByGroup[group ?? 'A'];
   const [searchTerm, setSearchTerm] = useState('');
+  const categories = ["The People", "The Places", "Residences", "Suppliers", "Operational"];
+  const [openCategories, setOpenCategories] = useState<Set<string>>(new Set(categories));
+
+  const toggleCategory = (cat: string) => {
+    setOpenCategories(prev => {
+      const next = new Set(prev);
+      if (next.has(cat)) next.delete(cat);
+      else next.add(cat);
+      return next;
+    });
+  };
 
   const filteredTerms = glossaryTerms.filter(item =>
     item.term.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -51,48 +62,55 @@ const Glossary = () => {
       {/* Terms List */}
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         {filteredTerms.length > 0 ? (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
-            {["The People", "The Places", "Suppliers etc.", "Operational"].map(category => {
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
+            {categories.map(category => {
                const categoryTerms = filteredTerms.filter(item => item.category === category);
                if (categoryTerms.length === 0) return null;
-               
+               const isOpen = openCategories.has(category);
+
                return (
-                 <div key={category}>
-                   <h2 style={{ 
-                     color: 'var(--color-primary)', 
-                     fontSize: '1.75rem', 
-                     borderBottom: '2px solid var(--color-accent-blue)', 
-                     paddingBottom: '0.5rem',
-                     marginBottom: 'var(--spacing-lg)',
-                     display: 'inline-block'
-                   }}>
-                     {category}
-                   </h2>
-                   <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
-                    {categoryTerms.map((item, index) => (
-                      <div key={index} className="glossary-term" style={{
-                        backgroundColor: 'var(--color-bg-soft)',
-                        padding: 'var(--spacing-lg)',
-                        borderRadius: 'var(--radius-md)',
-                        display: 'flex',
-                        alignItems: 'baseline',
-                        gap: 'var(--spacing-md)',
-                        flexWrap: 'wrap'
-                      }}>
-                        <span style={{ 
-                          fontSize: '1.25rem', 
-                          fontWeight: '700', 
-                          color: 'var(--color-primary)',
-                          minWidth: '150px'
-                        }} className="glossary-term-label">
-                          {item.term}
-                        </span>
-                        <span style={{ color: 'var(--color-text)', lineHeight: 1.6, flex: 1 }}>
-                          {item.definition}
-                        </span>
-                      </div>
-                    ))}
-                   </div>
+                 <div key={category} style={{ border: '1px solid var(--color-bg-soft)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+                   <button
+                     onClick={() => toggleCategory(category)}
+                     style={{
+                       width: '100%',
+                       display: 'flex',
+                       alignItems: 'center',
+                       justifyContent: 'space-between',
+                       padding: '0.85rem var(--spacing-lg)',
+                       background: 'var(--color-bg-soft)',
+                       border: 'none',
+                       cursor: 'pointer',
+                       fontFamily: 'var(--font-body)',
+                     }}
+                   >
+                     <h2 style={{ color: 'var(--color-primary)', fontSize: '1.25rem', margin: 0 }}>
+                       {category}
+                     </h2>
+                     {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                   </button>
+
+                   {isOpen && (
+                     <div style={{ padding: '0.5rem 0' }}>
+                       {categoryTerms.map((item, index) => (
+                         <div key={index} className="glossary-term" style={{
+                           display: 'grid',
+                           gridTemplateColumns: '220px 1fr',
+                           alignItems: 'baseline',
+                           gap: 'var(--spacing-md)',
+                           padding: '0.45rem var(--spacing-lg)',
+                           borderBottom: index < categoryTerms.length - 1 ? '1px solid var(--color-bg-soft)' : 'none',
+                         }}>
+                           <span style={{ fontWeight: '700', color: 'var(--color-primary)', fontSize: '0.95rem' }} className="glossary-term-label">
+                             {item.term}
+                           </span>
+                           <span style={{ color: 'var(--color-text)', lineHeight: 1.5, fontSize: '0.95rem' }}>
+                             {item.definition}
+                           </span>
+                         </div>
+                       ))}
+                     </div>
+                   )}
                  </div>
                );
             })}
@@ -109,15 +127,9 @@ const Glossary = () => {
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
           .glossary-term {
-            flex-direction: column !important;
-            align-items: flex-start !important;
-          }
-
-          .glossary-term-label {
-            min-width: auto !important;
-            width: 100%;
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>
