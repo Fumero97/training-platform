@@ -54,7 +54,7 @@ const Home = () => {
             fontWeight: '800',
             color: 'var(--color-primary)',
             position: 'relative',
-            display: 'inline-block'
+            display: 'block'
           }} className="home-title">
             {title.line1}<br />
             {title.line2}<br />

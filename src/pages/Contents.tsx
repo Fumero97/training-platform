@@ -105,7 +105,7 @@ const Contents = () => {
     },
   ];
 
-  const modules = group === 'B' ? modulesB : modulesA;
+  const modules = (group === 'B' || group === 'C') ? modulesB : modulesA;
 
   return (
     <div className="container fade-in" style={{ padding: 'var(--spacing-2xl) var(--spacing-lg)' }}>
