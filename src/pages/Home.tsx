@@ -46,8 +46,8 @@ const Home = () => {
             Internal Resource
           </span>
 
-          <h1 style={{ 
-            fontSize: '5rem', 
+          <h1 style={{
+            fontSize: '5rem',
             marginBottom: '1.5rem',
             letterSpacing: '-0.03em',
             lineHeight: 1,
