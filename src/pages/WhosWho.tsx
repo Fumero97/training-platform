@@ -37,6 +37,17 @@ const WhosWho = () => {
         </div>
       </div>
 
+      <div style={{ marginTop: '6rem', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-xl)' }}>Language in Action Mission and Values</h2>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <img
+            src="/lia-mission-values.png"
+            alt="Language in Action Mission and Values"
+            style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' }}
+          />
+        </div>
+      </div>
+
       <div style={{ marginTop: '4rem', textAlign: 'center' }}>
         <Button size="lg" onClick={() => navigate('/contents')}>
           Let's Start

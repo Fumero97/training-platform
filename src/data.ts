@@ -502,7 +502,7 @@ export const modules: Module[] = [
             title: "Concerns",
             isAccordion: true,
             content:
-              '<p>If there are any concerns about a student’s behaviour or welfare in the classroom, the teacher will speak to the Centre Manager, who will need to investigate the concern. For more information see section <a href="/contents/4.0">4.0 Safeguarding & Welfare</a>, and the Language in Action Employee Handbook</p>',
+              '<p>If there are any concerns about a student’s behaviour or welfare in the classroom, the teacher will speak to the Centre Manager, who will need to investigate the concern. For more information see section <a href="/contents/4.0">4.0 Safeguarding & Welfare</a>.</p>',
           },
         ],
       },
@@ -521,14 +521,14 @@ export const modules: Module[] = [
               "<p>The summer programme accepts more than four thousand students and group leaders, and their safety and security, as well as the safety and security of the Language in Action Team is the main priority of all Language in Action employees.</p><p>Knowing what to do and how to do it ensures that every precaution and action is taken in an effort to protect those in our care whilst maintaining high standards of business practice.</p><p>As a member of the management team it is important that in the event of an emergency, you are able to orchestrate the response appropriately. There is always a more senior manager to liaise with, should you need to. If there is a situation you feel uncomfortable dealing with, or the situation is serious enough to warrant it, you should alert people in the following order: Coordinators > Centre Manager > Programme Manager > Deputy Head of Juniors > Head of Juniors</p>",
           },
           {
-            title: "What the Employee Handbook says",
+            title: "Emergency Plan of Action",
             content:
-              "<p>The following is taken verbatim from the Language in Action Employee Handbook. You have access to the full handbook via your HR Portal at my-malvern.com.</p><p><strong>Emergency Plan of Action:</strong> This EPoA is to be executed by the designated Activity Leader, appointed by the Activity Manager. In the event of an emergency:</p><ul><li>Establish nature and extent of the emergency.</li><li>If there are injuries, establish their extent and have first aid administered (if you, or another member of the group, have been trained or feel capable – but be aware of consequences that might follow were you to give incorrect treatment).</li><li>Telephone relevant emergency services- 999 or launch 112 app.</li><li>Establish names of the injured and ensure that all other members of the group are accounted for and safe.</li><li>Advise other staff and Group Leaders of the incident and that emergency procedures are in operation.</li><li>Ensure that an adult from the group (agency Group Leader or LIA staff members) accompanies casualties to hospital or if on your own you go with the injured student(s) or staff members; the Emergency Services will look after the rest of the party until another member of staff arrives.</li><li>Ensure that the remainder of the group are adequately supervised by Group Leaders and any other LIA staff throughout and arrange for their early return to accommodation, accompanied by Group Leaders.</li><li>Arrange for one adult (LIA staff member or Group Leader) to remain at the incident site to liaise with emergency services until the incident is over and all students, Group Leaders and staff are accounted for.</li><li>Control access to telephones until contact is made with the Centre Manager and until they have had time to contact those directly involved. Pass full details of the incident (name, nature, date and time of incident, location of incident, details of injuries, names and telephone numbers of those involved, action taken so far).</li><li>Identify alternate telephone numbers in case telephone lines become jammed.</li><li>The Company will arrange to contact the parents or next of kin of those involved. In serious incidents the parents or next of kin of all party members should be informed.</li><li>Write down accurately and as soon as possible all relevant facts and witness details and preserve any vital evidence.</li><li>Complete an accident report form as soon as possible.</li><li>No one in the group should speak to the media. Names of those involved in the incident should not be given to the media as this could cause distress to their families.</li><li>No one in the group should discuss legal liability with other parties.</li></ul>",
+              "<p>In the event of an emergency:</p><ul><li>Establish nature and extent of the emergency.</li><li>If there are injuries, establish their extent and have first aid administered (if you, or another member of the group, have been trained or feel capable – but be aware of consequences that might follow were you to give incorrect treatment).</li><li>Telephone relevant emergency services- 999 or launch 112 app.</li><li>Establish names of the injured and ensure that all other members of the group are accounted for and safe.</li><li>Advise other staff and Group Leaders of the incident and that emergency procedures are in operation.</li><li>Ensure that an adult from the group (agency Group Leader or LIA staff members) accompanies casualties to hospital or if on your own you go with the injured student(s) or staff members; the Emergency Services will look after the rest of the party until another member of staff arrives.</li><li>Ensure that the remainder of the group are adequately supervised by Group Leaders and any other LIA staff throughout and arrange for their early return to accommodation, accompanied by Group Leaders.</li><li>Arrange for one adult (LIA staff member or Group Leader) to remain at the incident site to liaise with emergency services until the incident is over and all students, Group Leaders and staff are accounted for.</li><li>Control access to telephones until contact is made with the Centre Manager and until they have had time to contact those directly involved. Pass full details of the incident (name, nature, date and time of incident, location of incident, details of injuries, names and telephone numbers of those involved, action taken so far).</li><li>Identify alternate telephone numbers in case telephone lines become jammed.</li><li>The Company will arrange to contact the parents or next of kin of those involved. In serious incidents the parents or next of kin of all party members should be informed.</li><li>Write down accurately and as soon as possible all relevant facts and witness details and preserve any vital evidence.</li><li>Complete an accident report form as soon as possible.</li><li>No one in the group should speak to the media. Names of those involved in the incident should not be given to the media as this could cause distress to their families.</li><li>No one in the group should discuss legal liability with other parties.</li></ul>",
           },
           {
             title: "Emergency Plan of Action Flow Chart",
             content:
-              '<p>The below flow chart provides a step-by-step guide on executing the Emergency Plan of Action. This chart should be displayed clearly in the Language in Action Office and available for all team members to read. It is also included in the Activity Leader Online Training package.</p><p>You can click <a href="https://drive.google.com/file/d/1w27tLTtvbkzc3VO9tqDKMJuj1Nj7rSBa/view?usp=sharing" target="_blank">here</a> to open the document in a new tab</p><p>Remember: If you are ever in doubt, contact your Programme Manager.</p>',
+              '<p>The below flow chart provides a step-by-step guide on executing the Emergency Plan of Action. The flowchart should be displayed clearly in the Language in Action Office and available for all team members to read.</p><img src="/emergency-plan-of-action.png" alt="Emergency Plan of Action Flow Chart" style="width:100%;border-radius:8px;margin-top:1rem;margin-bottom:1rem;" /><p>Remember: If you are ever in doubt, contact your Programme Manager.</p>',
           },
         ],
       },
@@ -668,7 +668,7 @@ export const modules: Module[] = [
             title: "Day Zero on campus",
             isAccordion: true,
             content:
-              "<p>The day will run differently each turnover depending on departure and arrival times, but typically students will start departing around breakfast, and start arriving after lunch. Expect students to have been travelling all day and some on several different flights - they will be tired and hungry.</p><p>It is vital that the turnover day is well organised, and that the team understand that their appearance and attitude on these days must be exceptional.</p><p>Let's start with the primary roles of the Campus Coordinator and Campus Team</p><ul><li>The first thing to do is check in with the facilities and reception teams to ensure everything you have planned is still in place, and that everyone is ready. The two main areas are room cleaning and room key production/availability. You will also have all team members working, and you should ensure that everyone knows their task, times, and cleaning schedules.</li><li>You can preassign roles to your team and keep them in their roles throughout the day if possible. Roles can include things like: check-in desk with meet & greet, room checks and maintenance, or campus tours.</li><li>Each departure should be allocated a team member to see the group off, and importantly, collect their room keys. Once keys are collected, they can be sorted and reassigned for the new arrivals as per your plan.</li><li>As student groups leave, you need to communicate this information to the cleaning team, so they know which rooms are ready to be turned over. As the rooms get cleaned you will need to send Campus Leaders to check the rooms to ensure they meet the standards Language in Action expect. There is a checklist on the Staff Drive that can be used.</li></ul><p>When the groups arrive, and before they begin their tour, the Centre Manager will sit with the group leader to confirm some essential information. This meeting will last no more than 10 minutes. There is a Group Leader Agenda in the staff drive which covers:</p><ul><li>Who’s who in the centre</li><li>Emergency procedures</li><li>How the room allocation will work</li><li>A detailed Itinerary for the following day (placement tests and inductions, timetable confirmation)</li><li>Confirmation of dietary requirements, allergies, disabilities, and other special needs</li></ul><p>All groups are given a packed dinner on arrivals day. They should be handed from no earlier than 6pm and groups that arrive earlier must be informed of the plan when they arrive.</p><p>ARRIVALS:</p><ul><li>Lunch : included ONLY if their landing time in the UK is scheduled for not later than 11.00 AM - Lunch will typically mean you will have to order pizza delivery for that group.</li><li>Dinner: always included as a packed meal from 6pm</li></ul><p>DEPARTURE:</p><ul><li>Breakfast : always included (packed if the students depart before the service starting time)</li><li>Lunch : included (packed, except special cases) only if the students’ departure flight is scheduled for not earlier than 12.00 PM</li></ul><p>If a group leaves earlier than that, we’re not responsible for the students anymore as the they are not in the UK at lunchtime, and do not pay for their meal while travelling.</p><p>All the other meals outside those deadlines will be considered as extra.</p><p>In case of changes on flight departure/arrival times that affect the meal plan the deadline will be 2 days before the starting date of the study vacation (for instance: your original arrival time was 1.30 PM, so the lunch wasn’t included, and the new arrival time is 10.30 AM: If the change is communicated 2 days in advance no charge will be applied, if the communication arrives late, the meals may be not guaranteed and a charge may be applied).</p><p>This process will repeat for most of the day, and it is important to maintain a high level of concentration and organisation throughout. The later into the day, the more tired your team will become, and checking in on them is important. Ensure that everyone gets food, and sufficient breaks.</p><p>Only when all the students are in their rooms is the day over, and you must maintain a sufficient level of staffing until everything is complete.</p><p>Your Programme Manager will be on site to support and provide instruction where needed, so you will not be alone, but remember, your team will look to you for the same.</p>",
+              "<p>The day will run differently each turnover depending on departure and arrival times, but typically students will start departing around breakfast, and start arriving after lunch. Expect students to have been travelling all day and some on several different flights - they will be tired and hungry.</p><p>It is vital that the turnover day is well organised, and that the team understand that their appearance and attitude on these days must be exceptional.</p><p>Let's start with the primary roles of the Campus Coordinator and Campus Team</p><ul><li>The first thing to do is check in with the facilities and reception teams to ensure everything you have planned is still in place, and that everyone is ready. The two main areas are room cleaning and room key production/availability. You will also have all team members working, and you should ensure that everyone knows their task, times, and cleaning schedules.</li><li>You can preassign roles to your team and keep them in their roles throughout the day if possible. Roles can include things like: check-in desk with meet & greet, room checks and maintenance, or campus tours.</li><li>Each departure should be allocated a team member to see the group off, and importantly, collect their room keys. Once keys are collected, they can be sorted and reassigned for the new arrivals as per your plan.</li><li>As student groups leave, you need to communicate this information to the cleaning team, so they know which rooms are ready to be turned over. As the rooms get cleaned you will need to send Campus Leaders to check the rooms to ensure they meet the standards Language in Action expect. There is a checklist on the Staff Drive that can be used.</li></ul><p>When the groups arrive, and before they begin their tour, the Centre Manager will sit with the group leader to confirm some essential information. This meeting will last no more than 10 minutes. There is a Group Leader Agenda in the staff drive which covers:</p><ul><li>Who’s who in the centre</li><li>Emergency procedures</li><li>How the room allocation will work</li><li>A detailed Itinerary for the following day (placement tests and inductions, timetable confirmation)</li><li>Confirmation of dietary requirements, allergies, disabilities, and other special needs</li></ul><p>All groups are given a packed dinner on arrivals day. They should be handed from no earlier than 6pm and groups that arrive earlier must be informed of the plan when they arrive.</p><p>ARRIVALS:</p><ul><li><strong>Lunch:</strong><ul><li>Students landing before 13:30 will receive two meals: one hot meal (food delivery, such as pizza or similar) and one packed meal.</li><li>Students landing after 13:30 will receive one meal only: a packed meal.</li></ul></li><li><strong>Dinner:</strong> Always included on arrival day, usually provided as a packed dinner for all students.</li></ul><p>DEPARTURE:</p><ul><li>Breakfast : always included (packed if the students depart before the service starting time)</li><li>Lunch : included (packed, except special cases) only if the students’ departure flight is scheduled for not earlier than 12.00 PM</li></ul><p>If a group leaves earlier than that, we’re not responsible for the students anymore as the they are not in the UK at lunchtime, and do not pay for their meal while travelling.</p><p>All the other meals outside those deadlines will be considered as extra.</p><p>In case of changes on flight departure/arrival times that affect the meal plan the deadline will be 2 days before the starting date of the study vacation (for instance: your original arrival time was 1.30 PM, so the lunch wasn’t included, and the new arrival time is 10.30 AM: If the change is communicated 2 days in advance no charge will be applied, if the communication arrives late, the meals may be not guaranteed and a charge may be applied).</p><p>This process will repeat for most of the day, and it is important to maintain a high level of concentration and organisation throughout. The later into the day, the more tired your team will become, and checking in on them is important. Ensure that everyone gets food, and sufficient breaks.</p><p>Only when all the students are in their rooms is the day over, and you must maintain a sufficient level of staffing until everything is complete.</p><p>Your Programme Manager will be on site to support and provide instruction where needed, so you will not be alone, but remember, your team will look to you for the same.</p>",
           },
           {
             title: "Day Zero off campus",
@@ -758,13 +758,13 @@ export const modules: Module[] = [
             title: "The Policy",
             isAccordion: true,
             content:
-              '<p>Everything you need to know to meet the high standards set out by Language in Action are detailed in the Language in Action Safeguarding and Child Protection Policy which can be accessed <a href="https://languageinactionltd.co.uk/policies/safeguarding-and-child-protection-policy/" target="_blank">on our website</a> and is also available from any of your management team.</p><p>You must read this policy before the first day of student arrivals.</p>',
+              '<p>Everything you need to know to meet the high standards set out by Language in Action are detailed in the Group Safeguarding and Prevent Policy and the <a href="https://languageinactionltd.co.uk/policies/lia-safeguarding-prevent-operational-implementation-addendum/" target="_blank">LiA Safeguarding & Prevent Operational Implementation Addendum</a>, which can be accessed <a href="https://languageinactionltd.co.uk/policies/group-safeguarding-and-prevent-policy/" target="_blank">on our website</a> and are also available from any of your management team.</p><p>You must read these documents before the first day of student arrivals.</p>',
           },
           {
             title: "Training",
             isAccordion: true,
             content:
-              '<p>Below you will find the links to read and complete essential documents and training.</p><p>You cannot work over the summer until you have completed this training.</p><p>The essential training and documentation is as follows:</p><ul><li><a href="#">Language in Action Safeguarding Policy</a></li><li>British Council Accreditation UK Safeguarding Training (Online Course)</li><li>UK Government PREVENT Training (Online Course)</li></ul><p>Language in Action Centre Managers and Welfare Managers are all trained to Specialist Safeguarding Level 3, and all Coordinators to at least Advanced Safeguarding Level 2. You will be provided this training if you do not hold the required level.</p>',
+              '<p>Below you will find the links to read and complete essential documents and training.</p><p>You cannot work over the summer until you have completed this training.</p><p>The essential training and documentation is as follows:</p><ul><li><a href="https://languageinactionltd.co.uk/policies/group-safeguarding-and-prevent-policy/" target="_blank">Group Safeguarding and Prevent Policy</a></li><li><a href="https://languageinactionltd.co.uk/policies/lia-safeguarding-prevent-operational-implementation-addendum/" target="_blank">LiA Safeguarding & Prevent Operational Implementation Addendum</a></li><li>British Council Accreditation UK Safeguarding Training (Online Course)</li><li>UK Government PREVENT Training (Online Course)</li></ul><p>Language in Action Centre Managers and Welfare Managers are all trained to Specialist Safeguarding Level 3, and all Coordinators to at least Advanced Safeguarding Level 2. You will be provided this training if you do not hold the required level.</p>',
           },
         ],
       },
@@ -793,12 +793,6 @@ export const modules: Module[] = [
             isAccordion: true,
             content:
               '<p>Aside from the above allergy requirements, other dietary requirements are likely to be for medical reasons (e.g. diabetic students), or for religious reasons. You should speak with the group leaders to fully understand what is and is not suitable for a student to eat, and maintain an open dialogue about it throughout their stay.</p><p>Confidence in areas such as this grow from communication – they need to know you are working hard to ensure their needs are met.</p><p>The largest non-allergy related dietary requirement you are likely to encounter is a request for a Halal diet from practising Muslims. Some key factors to note are that all meat and poultry must be labelled as Halal, and no pork or food containing alcohol is permitted. You can read more about a Halal diet <a href="https://www.muslim.org.au/uploads/1/3/7/8/13783065/a_guide_to_halal_food_2020.pdf" target="_blank">here</a>. The Welfare Manager must check with the catering team to ensure food is correctly labelled.</p>',
-          },
-          {
-            title: "Disabilities and Other Special Needs",
-            isAccordion: true,
-            content:
-              "<p>For more information on disability management and policies, see the Language in Action Staff Handbook.</p>",
           },
         ],
       },
@@ -1179,7 +1173,7 @@ export const glossaryTerms = [
     category: "The People",
   },
   {
-    term: "Process Development and Marketing Manager",
+    term: "Marketing and processes manager",
     definition: "Logistics, marketing, publications, posters and more",
     category: "The People",
   },
@@ -1189,7 +1183,7 @@ export const glossaryTerms = [
     category: "The People",
   },
   {
-    term: "Academic Programme Manager",
+    term: "Academic Manager",
     definition: "Academic division manager",
     category: "The People",
   },
@@ -1204,7 +1198,7 @@ export const glossaryTerms = [
     category: "The People",
   },
   {
-    term: "Deputy SL",
+    term: "DDSL",
     definition: "Deputy Safeguarding Lead",
     category: "The People",
   },
@@ -1248,7 +1242,7 @@ export const glossaryTerms = [
   },
   {
     term: "Wembley Summer Centre",
-    definition: "Lycée Français Charles de Gaulle de Londres",
+    definition: "Lycée International de Londres Winston Churchill",
     category: "The Places",
   },
   {
@@ -1283,11 +1277,6 @@ export const glossaryTerms = [
   },
 
   // Residences
-  {
-    term: "Rusholme Place",
-    definition: "Manchester",
-    category: "Residences",
-  },
   {
     term: "Canterbury Court",
     definition: "Manchester",
@@ -1774,13 +1763,13 @@ export const modulesB: Module[] = [
             title: "The Policy",
             isAccordion: true,
             content:
-              '<p>Everything you need to know to meet the high standards set out by Language in Action are detailed in the Language in Action Safeguarding and Child Protection Policy which can be accessed via the <a href="https://languageinactionltd.co.uk/policies/safeguarding-and-child-protection-policy/" target="_blank" rel="noopener noreferrer">Language in Action website</a> and is also available from any of your management team.</p><p>You must read this policy before the first day of student arrivals.</p>',
+              '<p>Everything you need to know to meet the high standards set out by Language in Action are detailed in the Group Safeguarding and Prevent Policy and the <a href="https://languageinactionltd.co.uk/policies/lia-safeguarding-prevent-operational-implementation-addendum/" target="_blank" rel="noopener noreferrer">LiA Safeguarding & Prevent Operational Implementation Addendum</a>, which can be accessed via the <a href="https://languageinactionltd.co.uk/policies/group-safeguarding-and-prevent-policy/" target="_blank" rel="noopener noreferrer">Language in Action website</a> and are also available from any of your management team.</p><p>You must read these documents before the first day of student arrivals.</p>',
           },
           {
             title: "Training",
             isAccordion: true,
             content:
-              '<p>You cannot work over the summer until you have completed this training.</p><p>The essential training and documentation is as follows:</p><ul><li><a href="https://languageinactionltd.co.uk/policies/safeguarding-and-child-protection-policy/" target="_blank" rel="noopener noreferrer">Language in Action Safeguarding Policy</a></li><li>British Council Accreditation UK Safeguarding Training (Online Course)</li><li>UK Government PREVENT Training (Online Course)</li></ul><p>Language in Action Welfare Managers are all trained to Advanced Safeguarding (formerly Level 3), and all Coordinators to at least Safeguarding Level 2. You will be provided any required training if you do not hold the required level.</p>',
+              '<p>You cannot work over the summer until you have completed this training.</p><p>The essential training and documentation is as follows:</p><ul><li><a href="https://languageinactionltd.co.uk/policies/group-safeguarding-and-prevent-policy/" target="_blank" rel="noopener noreferrer">Group Safeguarding and Prevent Policy</a></li><li><a href="https://languageinactionltd.co.uk/policies/lia-safeguarding-prevent-operational-implementation-addendum/" target="_blank" rel="noopener noreferrer">LiA Safeguarding & Prevent Operational Implementation Addendum</a></li><li>British Council Accreditation UK Safeguarding Training (Online Course)</li><li>UK Government PREVENT Training (Online Course)</li></ul><p>Language in Action Welfare Managers are all trained to Advanced Safeguarding (formerly Level 3), and all Coordinators to at least Safeguarding Level 2. You will be provided any required training if you do not hold the required level.</p>',
           },
         ],
       },
@@ -1814,7 +1803,7 @@ export const modulesB: Module[] = [
             title: "Disabilities and Other Special Needs",
             isAccordion: true,
             content:
-              '<p>Language in Action aims to support and welcome students who have a physical or learning disability and to minimise the impact that their disability has on their learning and overall experience at the school.</p><p>Your Welfare Manager will share any information you may need to know.</p><p>For more information on disability management and policies, see the <a href="https://languageinactionltd.co.uk/policies/" target="_blank" rel="noopener noreferrer">Language in Action website</a>.</p>',
+              '<p>Language in Action aims to support and welcome students who have a physical or learning disability and to minimise the impact that their disability has on their learning and overall experience at the school.</p><p>Your Welfare Manager will share any information you may need to know.</p>',
           },
         ],
       },
@@ -1940,7 +1929,7 @@ export const modulesB: Module[] = [
             title: "Emergency Plan of Action Flow Chart",
             isAccordion: true,
             content:
-              '<p>The below flow chart provides a step-by-step guide on executing the Emergency Plan of Action. This chart should be displayed clearly in the Language in Action Office and available for all team members to read. You can also <a href="https://drive.google.com/file/d/1w27tLTtvbkzc3VO9tqDKMJuj1Nj7rSBa/view" target="_blank" rel="noopener noreferrer">click here</a> to open the document in a new tab.</p><img src="/emergency-flowchart.png" alt="Emergency Plan of Action Flow Chart" style="width:100%;border-radius:8px;margin-top:1rem;" />',
+              '<p>The below flow chart provides a step-by-step guide on executing the Emergency Plan of Action. This chart should be displayed clearly in the Language in Action Office and available for all team members to read.</p><img src="/emergency-plan-of-action.png" alt="Emergency Plan of Action Flow Chart" style="width:100%;border-radius:8px;margin-top:1rem;" />',
           },
         ],
       },
